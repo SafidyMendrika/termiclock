@@ -8,5 +8,10 @@
     "name" : "star",
     "value" : "*",
     "path" : "data/font-star.json"
+  },
+  {
+    "name" : "clock",
+    "value" : "/",
+    "path" : "data/font-clock.json"
   }
 ]

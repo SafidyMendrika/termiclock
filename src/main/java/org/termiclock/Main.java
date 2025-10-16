@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Number n = null;
-            for(int i = 0 ; i < 10 ; i++){
-                n = new Number(i,"star");
+            for(int i = 89 ; i < 108 ; i++){
+                n = new Number(i,"hashtag");
                 n.print();
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }
 
         }catch (Exception e){
