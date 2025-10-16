@@ -1,11 +1,19 @@
 package org.termiclock;
 
+import org.termiclock.number.Number;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+        try {
+            Number n = null;
+            for(int i = 0 ; i < 10 ; i++){
+                n = new Number(i,"star");
+                n.print();
+                Thread.sleep(1000);
+            }
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

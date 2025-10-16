@@ -1,0 +1,12 @@
+[
+  {
+    "name" : "hashtag",
+    "value" : "#",
+    "path" : "data/font-hashtag.json"
+  },
+  {
+    "name" : "star",
+    "value" : "*",
+    "path" : "data/font-star.json"
+  }
+]
