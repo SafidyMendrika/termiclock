@@ -4,8 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,11 +15,15 @@ public class JsonParser {
     public  JsonParser() {
 
     }
-    private  final String fontPath = "src/main/java/org/termiclock/font";
+    // private  final String fontPath = "src/main/resources/font"; // dev
+    private  final String fontPath = "font"; // build
     public List<FontType> getFontTypes() throws  Exception{
         Gson gson = new Gson();
         List<FontType> types = null;
-        try (Reader reader = new FileReader(fontPath + "/types.json")) {
+        try (InputStreamReader reader = new InputStreamReader(
+            getClass().getClassLoader().getResourceAsStream(fontPath + "/types.json"),
+            StandardCharsets.UTF_8
+        )) {
             Type listFontType = new TypeToken<List<FontType>>() {}.getType();
 
             types = gson.fromJson(reader, listFontType);
@@ -46,7 +52,10 @@ public class JsonParser {
 
         FontType fontType = this.getFontType(fontName);
 
-        try (FileReader reader = new FileReader(this.fontPath +"/"+ fontType.getPath())) {
+        try (InputStreamReader reader = new InputStreamReader(
+                getClass().getClassLoader().getResourceAsStream("font/" + fontType.getPath()),
+                StandardCharsets.UTF_8
+            );) {
 
             Type type = new TypeToken<HashMap<String, List<List<String>>>>() {}.getType();
 
@@ -70,7 +79,10 @@ public class JsonParser {
 
         FontType fontType = this.getFontType(fontName);
 
-        try (FileReader reader = new FileReader(this.fontPath +"/"+ fontType.getDotsPath())) {
+        try (InputStreamReader reader = new InputStreamReader(
+                getClass().getClassLoader().getResourceAsStream("font/" + fontType.getDotsPath()),
+                StandardCharsets.UTF_8
+            );) {
 
             Type type = new TypeToken<List<List<String>>>() {}.getType();
 
@@ -88,7 +100,10 @@ public class JsonParser {
 
         FontType fontType = this.getFontType(fontName);
 
-        try (FileReader reader = new FileReader(this.fontPath +"/"+ fontType.getDatePath())) {
+        try (InputStreamReader reader = new InputStreamReader(
+                getClass().getClassLoader().getResourceAsStream("font/" + fontType.getDatePath()),
+                StandardCharsets.UTF_8
+            );) {
 
             Type type = new TypeToken<List<List<String>>>() {}.getType();
 
