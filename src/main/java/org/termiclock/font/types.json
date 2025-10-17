@@ -3,7 +3,8 @@
     "name" : "hashtag",
     "value" : "#",
     "path" : "data/font-hashtag.json",
-    "dotsPath" : "data/dots/dots-hashtag.json"
+    "dotsPath" : "data/dots/dots-hashtag.json",
+    "datePath" : "data/dots/date-hashtag.json"
   },
   {
     "name" : "star",

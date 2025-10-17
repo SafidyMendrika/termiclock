@@ -7,6 +7,7 @@ public class FontType {
     public String path;
     public String value;
     public String dotsPath;
+    public String datePath;
 
     public String toJson(){
         return new Gson().toJson(this);
@@ -30,5 +31,13 @@ public class FontType {
 
     public String getDotsPath() {
         return dotsPath;
+    }
+
+    public String getDatePath() {
+        return datePath;
+    }
+
+    public void setDatePath(String datePath) {
+        this.datePath = datePath;
     }
 }

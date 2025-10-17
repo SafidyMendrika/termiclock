@@ -7,8 +7,7 @@ public class Main {
     public static void main(String[] args) {
         
         try {
-            ClockProcess clockProcess = new ClockProcess();
-            clockProcess.launch();
+            ClockProcess.handleArguments(args).launch();;
          
         } catch (Exception e) {
             e.printStackTrace();

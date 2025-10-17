@@ -81,4 +81,22 @@ public class JsonParser {
         }
         return dots;
     }
+    
+    public List<List<String>> getDateDots(String fontName)throws Exception{
+        Gson gson = new Gson();
+        List<List<String>> dots = null;
+
+        FontType fontType = this.getFontType(fontName);
+
+        try (FileReader reader = new FileReader(this.fontPath +"/"+ fontType.getDatePath())) {
+
+            Type type = new TypeToken<List<List<String>>>() {}.getType();
+
+            dots = gson.fromJson(reader, type);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw  e;
+        }
+        return dots;
+    }
 }
