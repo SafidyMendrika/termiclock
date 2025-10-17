@@ -79,13 +79,27 @@ jar --create --file TermiClock.jar --main-class org.termiclock.Main -C out .
 
 ## 🚀 Usage
 
+### With the Windows Executable (Portable / zip)
+0. Get the zip file at  [this link](https://drive.google.com/file/d/1MDriizUK-VTr-l-YGkDKGT-HrCqqU-mS/view?usp=sharing)
+1. Extract the zip folder containing `termiclock.exe` and the `jre/` folder.
+2. **Do not move files individually**; keep the folder structure intact:
+
+```
+termiclock
+├─ termiclock.exe
+└─ jre/
+```
+3. Double-click `termiclock.exe` to launch the clock.  
+- The executable automatically uses the bundled JRE.  
+- No Java installation is needed on the machine.
+
 ### With the JAR
 
 ```bash
 java -jar TermiClock.jar [options]
 ```
 
-### With the Windows Executable
+### With the Windows Executable (if you already have jdk/jre installed)
 
 ```bash
 TermiClock.exe [options]

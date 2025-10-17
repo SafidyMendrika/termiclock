@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
-  <jar>D:\PERSONNAL\projects\DEVs\JAVA\termiclock\out\artifacts\termiclock_jar\termiclock.jar</jar>
-  <outfile>D:\PERSONNAL\projects\DEVs\JAVA\termiclock\out\termiclock.exe</outfile>
+  <jar>D:\PERSONNAL\projects\DEVs\JAVA\termiclock\termiclock.jar</jar>
+  <outfile>D:\PERSONNAL\projects\DEVs\JAVA\termiclock\termiclock.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,15 +13,12 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\mendr\Downloads\termiclock.ico</icon>
-  <classPath>
-    <mainClass>org.termiclock.Main</mainClass>
-  </classPath>
+  <icon>D:\PERSONNAL\projects\DEVs\JAVA\termiclock\icon.ico</icon>
   <jre>
-    <path>%JAVA_HOME%;%PATH%</path>
+    <path>jre;%JAVA_HOME%;%PATH%</path>
     <requiresJdk>false</requiresJdk>
     <requires64Bit>false</requires64Bit>
-    <minVersion></minVersion>
+    <minVersion>17</minVersion>
     <maxVersion></maxVersion>
   </jre>
 </launch4jConfig>
