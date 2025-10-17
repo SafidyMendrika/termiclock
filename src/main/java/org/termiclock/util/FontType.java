@@ -6,6 +6,7 @@ public class FontType {
     public String name;
     public String path;
     public String value;
+    public String dotsPath;
 
     public String toJson(){
         return new Gson().toJson(this);
@@ -21,5 +22,13 @@ public class FontType {
 
     public String getValue() {
         return value;
+    }
+
+    public void setDotsPath(String dotsPath) {
+        this.dotsPath = dotsPath;
+    }
+
+    public String getDotsPath() {
+        return dotsPath;
     }
 }

@@ -63,4 +63,22 @@ public class JsonParser {
         String json = gson.toJson(object);
         return json;
     }
+
+    public List<List<String>> getTimeDots(String fontName)throws Exception{
+        Gson gson = new Gson();
+        List<List<String>> dots = null;
+
+        FontType fontType = this.getFontType(fontName);
+
+        try (FileReader reader = new FileReader(this.fontPath +"/"+ fontType.getDotsPath())) {
+
+            Type type = new TypeToken<List<List<String>>>() {}.getType();
+
+            dots = gson.fromJson(reader, type);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw  e;
+        }
+        return dots;
+    }
 }

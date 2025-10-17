@@ -2,7 +2,8 @@
   {
     "name" : "hashtag",
     "value" : "#",
-    "path" : "data/font-hashtag.json"
+    "path" : "data/font-hashtag.json",
+    "dotsPath" : "data/dots/dots-hashtag.json"
   },
   {
     "name" : "star",
